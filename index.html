@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptador de Texto</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="header-content">
+                <img src="logo.png" alt="Logo" class="logo">
+                <h1>Encriptador de Texto</h1>
+            </div>
+        </header>
+        <div class="text-container">
+            <div class="text-wrapper">
+                <textarea id="inputText" placeholder="Ingrese texto aquí..." oninput="validateInput()"></textarea>
+                <div id="outputContainer" class="hidden">
+                    <textarea id="outputText" readonly placeholder="Resultado..."></textarea>
+                </div>
+                <img id="placeholderImage" src="placeholder.png" alt="Imagen Placeholder" class="placeholder">
+            </div>            
+        </div>
+        <div class="buttons">
+            <button onclick="encryptText()">Encriptar</button>
+            <button onclick="decryptText()">Desencriptar</button>        
+        </div>
+        <button id="copyButton" onclick="copyToClipboard()">Copiar</button>
+        <p class="note">No se permiten letras mayúsculas ni caracteres especiales.</p>
+    </div>
+ 
+    <footer>
+        <p>Desarrollado por Maricarmen Mora</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
